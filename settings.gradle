@@ -1,0 +1,2 @@
+rootProject.name = 'otus_java_project'
+include 'sess-report-service'
