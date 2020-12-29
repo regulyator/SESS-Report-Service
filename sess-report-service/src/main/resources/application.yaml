@@ -1,0 +1,7 @@
+org:
+  sess:
+    report:
+      service:
+        templates:
+          locations:
+            - ./files/templates
