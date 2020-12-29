@@ -2,7 +2,7 @@
 <!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="USER_ACTIVITY_REPORT" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4a1d5eb-82dd-412f-a620-202e4bdf9dba">
 	<property name="template.engine" value="tabular_template"/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JSON_DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="Table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -40,8 +40,6 @@
 		</box>
 	</style>
 	<subDataset name="tableDataset" uuid="1d449957-b399-4f36-b1d2-b836691bae67">
-		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JSON_DataAdapter.xml"/>
-		<property name="net.sf.jasperreports.data.adapter" value="JSON_DataAdapter.xml"/>
 		<queryString language="JSON">
 			<![CDATA[]]>
 		</queryString>
@@ -110,14 +108,17 @@
 		<band height="200" splitType="Stretch">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<componentElement>
-				<reportElement x="0" y="0" width="555" height="200" uuid="be34660c-0da8-4942-9207-6677079ac9b1">
+				<reportElement style="Table" x="0" y="0" width="555" height="200" uuid="be34660c-0da8-4942-9207-6677079ac9b1">
 					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
 					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
 					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
 				</reportElement>
 				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
-					<datasetRun subDataset="tableDataset" uuid="e674ec2d-ed5e-4a7c-8484-e3b39609e4b8">
-						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<datasetRun subDataset="tableDataset" uuid="eaa1bafd-94bc-4674-a10e-6d02519fd253">
+						<datasetParameter name="REPORT_DATA_SOURCE">
+							<datasetParameterExpression><![CDATA[]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
 					</datasetRun>
 					<jr:column width="190" uuid="9e940d71-94c6-4550-9a3f-eef7542e8535">
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>

@@ -1,6 +1,7 @@
 package org.sess.report.services.report;
 
 import org.junit.jupiter.api.Test;
+import org.sess.report.services.report.impl.TemplatePathResolverJasperReportImpl;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import java.nio.file.Path;

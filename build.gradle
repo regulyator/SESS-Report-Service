@@ -19,6 +19,7 @@ allprojects {
 
     repositories {
         mavenCentral()
+        maven { url "http://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/" }
     }
 
     apply plugin: "io.spring.dependency-management"
@@ -33,6 +34,9 @@ allprojects {
             dependency("org.junit.jupiter:junit-jupiter-api:${Versions.jupiterTest}")
             dependency("org.mockito:mockito-core:${Versions.mockito}")
             dependency("org.mockito:mockito-junit-jupiter:${Versions.mockito}")
+            dependency("net.sf.jasperreports:jasperreports:${Versions.jasperreports}")
+            dependency("net.sf.jasperreports:jasperreports-functions:${Versions.jasperreports}")
+            dependency("commons-io:commons-io:${Versions.commonsIo}")
         }
     }
 }

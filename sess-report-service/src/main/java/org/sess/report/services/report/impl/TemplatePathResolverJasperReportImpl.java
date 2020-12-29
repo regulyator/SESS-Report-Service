@@ -1,5 +1,6 @@
-package org.sess.report.services.report;
+package org.sess.report.services.report.impl;
 
+import org.sess.report.services.report.TemplatePathResolver;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
