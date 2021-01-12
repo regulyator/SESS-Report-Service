@@ -12,6 +12,9 @@ dependencies {
     implementation 'net.sf.jasperreports:jasperreports-functions'
     implementation 'com.lowagie:itext:2.1.7'
     implementation 'commons-io:commons-io'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
     testImplementation 'org.junit.jupiter:junit-jupiter-api'

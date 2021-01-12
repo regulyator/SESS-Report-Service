@@ -1,6 +1,8 @@
-package org.sess.report.services.report;
+package org.sess.report.services.report.service.print;
 
 import net.sf.jasperreports.engine.JasperReport;
+
+import java.util.List;
 
 public interface JasperReportCompileManager {
 

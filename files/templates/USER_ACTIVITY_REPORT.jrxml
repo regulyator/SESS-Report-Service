@@ -4,41 +4,41 @@
 	<property name="template.engine" value="tabular_template"/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Json"/>
 	<subDataset name="tableDataset" uuid="1d449957-b399-4f36-b1d2-b836691bae67">
-		<field name="EVENT_NAME" class="java.lang.String">
-			<property name="net.sf.jasperreports.json.field.expression" value="EVENT_NAME"/>
-			<fieldDescription><![CDATA[EVENT_NAME]]></fieldDescription>
+		<field name="eventName" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="eventName"/>
+			<fieldDescription><![CDATA[eventName]]></fieldDescription>
 		</field>
-		<field name="EVENT_START_DTIME" class="java.lang.String">
-			<property name="net.sf.jasperreports.json.field.expression" value="EVENT_START_DTIME"/>
-			<fieldDescription><![CDATA[EVENT_START_DTIME]]></fieldDescription>
+		<field name="plannedDtStart" class="java.util.Date">
+			<property name="net.sf.jasperreports.json.field.expression" value="plannedDtStart"/>
+			<fieldDescription><![CDATA[plannedDtStart]]></fieldDescription>
 		</field>
-		<field name="EVENT_END_DTIME" class="java.lang.String">
-			<property name="net.sf.jasperreports.json.field.expression" value="EVENT_END_DTIME"/>
-			<fieldDescription><![CDATA[EVENT_END_DTIME]]></fieldDescription>
+		<field name="plannedDtEnd" class="java.util.Date">
+			<property name="net.sf.jasperreports.json.field.expression" value="plannedDtEnd"/>
+			<fieldDescription><![CDATA[plannedDtEnd]]></fieldDescription>
 		</field>
-		<field name="EVENT_DISTANTION" class="java.lang.String">
-			<property name="net.sf.jasperreports.json.field.expression" value="EVENT_DISTANTION"/>
-			<fieldDescription><![CDATA[EVENT_DISTANTION]]></fieldDescription>
+		<field name="distance" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="distance"/>
+			<fieldDescription><![CDATA[distance]]></fieldDescription>
 		</field>
 	</subDataset>
 	<queryString language="json">
 		<![CDATA[]]>
 	</queryString>
-	<field name="EVENT_NAME" class="java.lang.String">
-		<property name="net.sf.jasperreports.json.field.expression" value="EVENT_NAME"/>
-		<fieldDescription><![CDATA[EVENT_NAME]]></fieldDescription>
+	<field name="eventName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="eventName"/>
+		<fieldDescription><![CDATA[eventName]]></fieldDescription>
 	</field>
-	<field name="EVENT_START_DTIME" class="java.lang.String">
-		<property name="net.sf.jasperreports.json.field.expression" value="EVENT_START_DTIME"/>
-		<fieldDescription><![CDATA[EVENT_START_DTIME]]></fieldDescription>
+	<field name="plannedDtStart" class="java.util.Date">
+		<property name="net.sf.jasperreports.json.field.expression" value="plannedDtStart"/>
+		<fieldDescription><![CDATA[plannedDtStart]]></fieldDescription>
 	</field>
-	<field name="EVENT_END_DTIME" class="java.lang.String">
-		<property name="net.sf.jasperreports.json.field.expression" value="EVENT_END_DTIME"/>
-		<fieldDescription><![CDATA[EVENT_END_DTIME]]></fieldDescription>
+	<field name="plannedDtEnd" class="java.util.Date">
+		<property name="net.sf.jasperreports.json.field.expression" value="plannedDtEnd"/>
+		<fieldDescription><![CDATA[plannedDtEnd]]></fieldDescription>
 	</field>
-	<field name="EVENT_DISTANTION" class="java.lang.String">
-		<property name="net.sf.jasperreports.json.field.expression" value="EVENT_DISTANTION"/>
-		<fieldDescription><![CDATA[EVENT_DISTANTION]]></fieldDescription>
+	<field name="distance" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="distance"/>
+		<fieldDescription><![CDATA[distance]]></fieldDescription>
 	</field>
 	<title>
 		<band height="72">
@@ -111,7 +111,7 @@
 				<textElement>
 					<font fontName="Times New Roman" size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{EVENT_NAME}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{eventName}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="" x="190" y="0" width="130" height="20" uuid="0c2ad59b-a6f8-41c1-bad4-b84f563b4f1a"/>
@@ -124,7 +124,7 @@
 				<textElement>
 					<font fontName="Times New Roman" size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{EVENT_START_DTIME}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd.MM.yyyy HH:mm").format($F{plannedDtStart})]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="" x="320" y="0" width="110" height="20" uuid="16341934-10e4-42c5-8377-c3677ebdfdae"/>
@@ -137,7 +137,7 @@
 				<textElement>
 					<font fontName="Times New Roman" size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{EVENT_END_DTIME}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd.MM.yyyy HH:mm").format($F{plannedDtEnd})]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="" x="430" y="0" width="120" height="20" uuid="363ecffb-e9a8-47f1-967e-eb0fd86de40b"/>
@@ -150,7 +150,7 @@
 				<textElement>
 					<font fontName="Times New Roman" size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{EVENT_DISTANTION}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{distance}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

@@ -1,12 +1,15 @@
-package org.sess.report.services.report.impl;
+package org.sess.report.services.report.service.print.impl;
 
 import net.sf.jasperreports.engine.*;
-import org.sess.report.services.report.JasperReportFillManager;
+import org.sess.report.services.report.service.print.JasperReportFillManager;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
+/**
+ * заполняет отчет данными из dataSource
+ */
 @Service
 @Primary
 public class JasperReportFillManagerImpl implements JasperReportFillManager {

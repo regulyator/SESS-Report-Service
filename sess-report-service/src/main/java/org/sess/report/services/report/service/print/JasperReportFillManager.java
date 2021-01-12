@@ -1,4 +1,4 @@
-package org.sess.report.services.report;
+package org.sess.report.services.report.service.print;
 
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JasperPrint;

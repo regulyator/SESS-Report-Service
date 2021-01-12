@@ -1,10 +1,14 @@
-package org.sess.report.services.report;
+package org.sess.report.services.report.service.print.impl;
 
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JsonDataSource;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.sess.report.services.report.enums.JasperReportExportFormat;
+import org.sess.report.services.report.service.enums.JasperReportExportFormat;
+import org.sess.report.services.report.service.print.JasperReportCompileManager;
+import org.sess.report.services.report.service.print.JasperReportFileSaveManager;
+import org.sess.report.services.report.service.print.JasperReportFillManager;
+import org.sess.report.services.report.service.print.ReportExporter;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +18,9 @@ import java.nio.file.Files;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * экспортирует отчеты
+ */
 @Service
 @Primary
 public class JasperReportExporterJson implements ReportExporter {
@@ -21,6 +28,7 @@ public class JasperReportExporterJson implements ReportExporter {
     private final JasperReportCompileManager jasperReportCompileManager;
     private final JasperReportFillManager jasperReportFillManager;
     private final JasperReportFileSaveManager jasperReportFileSaveManager;
+    private final static String DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss";
 
     public JasperReportExporterJson(JasperReportCompileManager jasperReportCompileManager,
                                     JasperReportFillManager jasperReportFillManager,
@@ -36,8 +44,10 @@ public class JasperReportExporterJson implements ReportExporter {
 
             JasperReport report = jasperReportCompileManager.getOrCompileReport(reportName);
             if (Objects.nonNull(report)) {
+                JsonDataSource dataSource = new JsonDataSource(reportData);
+                dataSource.setDatePattern(DATE_FORMAT);
                 return jasperReportFileSaveManager.saveReport(
-                        jasperReportFillManager.fillReport(report, reportParamsMap, new JsonDataSource(reportData)), JasperReportExportFormat.PDF);
+                        jasperReportFillManager.fillReport(report, reportParamsMap, dataSource), JasperReportExportFormat.PDF);
             }
             return null;
         } catch (Exception ex) {

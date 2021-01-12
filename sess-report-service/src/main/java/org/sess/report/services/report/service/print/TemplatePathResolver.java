@@ -1,4 +1,4 @@
-package org.sess.report.services.report;
+package org.sess.report.services.report.service.print;
 
 import java.nio.file.Path;
 import java.util.Map;

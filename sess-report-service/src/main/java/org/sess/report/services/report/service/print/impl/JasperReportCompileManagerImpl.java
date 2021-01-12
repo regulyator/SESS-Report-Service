@@ -1,19 +1,21 @@
-package org.sess.report.services.report.impl;
+package org.sess.report.services.report.service.print.impl;
 
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperReport;
-import org.sess.report.services.report.JasperReportCompileManager;
-import org.sess.report.services.report.TemplatePathResolver;
+import org.sess.report.services.report.service.print.JasperReportCompileManager;
+import org.sess.report.services.report.service.print.TemplatePathResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.nio.file.Path;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
+import java.util.stream.Collectors;
 
+/**
+ * компилирует отчеты джаспера, ведет кэш скомпилированных отчетов
+ */
 @Service
 @Primary
 public class JasperReportCompileManagerImpl implements JasperReportCompileManager {
@@ -25,6 +27,11 @@ public class JasperReportCompileManagerImpl implements JasperReportCompileManage
         this.templatePathResolver = templatePathResolver;
     }
 
+    /**
+     * компилируем или отдаем ранее скомпилированный отчет по имени
+     * @param reportName имя отчета
+     * @return скомпилированный отчет
+     */
     @Override
     public JasperReport getOrCompileReport(String reportName) {
         if (jasperReportMap.containsKey(reportName)) {
@@ -35,6 +42,11 @@ public class JasperReportCompileManagerImpl implements JasperReportCompileManage
         }
     }
 
+    /**
+     * компилируем (если был ранее скомпилирован то перекомпилим) отчет
+     * @param reportName имя отчета
+     * @return скомпилированный отчет
+     */
     @Override
     public JasperReport compileReport(String reportName) {
         JasperReport compiledReport = null;
