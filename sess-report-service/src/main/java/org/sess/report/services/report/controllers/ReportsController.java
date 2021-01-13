@@ -48,7 +48,7 @@ public class ReportsController {
      * @return имена всех доступных отчетов
      */
     //TODO должна возвращаться еще и мета по отчетам (по какому набору данных, описание и т.д.)
-    @GetMapping(value = "/all")
+    @GetMapping(value = "/name")
     public List<String> getAllReportsName() {
         return new ArrayList<>(templatePathResolver.getAllTemplates().keySet());
     }

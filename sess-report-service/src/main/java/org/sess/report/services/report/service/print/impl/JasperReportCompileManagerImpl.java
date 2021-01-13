@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
  * компилирует отчеты джаспера, ведет кэш скомпилированных отчетов
  */
 @Service
-@Primary
 public class JasperReportCompileManagerImpl implements JasperReportCompileManager {
     private final TemplatePathResolver templatePathResolver;
     private final Map<String, JasperReport> jasperReportMap = new HashMap<>(5);

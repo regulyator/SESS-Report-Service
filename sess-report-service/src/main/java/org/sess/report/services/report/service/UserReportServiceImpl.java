@@ -17,7 +17,6 @@ import java.util.Objects;
  * основной сервис отчетности
  */
 @Service
-@Primary
 public class UserReportServiceImpl implements UserReportService {
     private final static String USER_ACTIVITY_REPORT_NAME = "USER_ACTIVITY_REPORT";
     //набор данных для примера

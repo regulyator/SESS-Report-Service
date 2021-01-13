@@ -22,7 +22,6 @@ import java.util.Objects;
  * экспортирует отчеты
  */
 @Service
-@Primary
 public class JasperReportExporterJson implements ReportExporter {
     private final Logger LOGGER = LogManager.getLogger(JasperReportExporterJson.class);
     private final JasperReportCompileManager jasperReportCompileManager;

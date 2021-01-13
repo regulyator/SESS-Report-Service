@@ -11,7 +11,6 @@ import java.util.Map;
  * заполняет отчет данными из dataSource
  */
 @Service
-@Primary
 public class JasperReportFillManagerImpl implements JasperReportFillManager {
     @Override
     public JasperPrint fillReport(JasperReport jasperReport, Map<String, Object> parameters, JRDataSource dataSource) {

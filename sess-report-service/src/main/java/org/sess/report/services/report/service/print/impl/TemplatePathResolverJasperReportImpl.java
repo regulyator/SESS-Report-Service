@@ -17,7 +17,6 @@ import java.util.Objects;
 /**
  * ищет отчеты в директории шаблонов и ведет кэш
  */
-@Primary
 @Service
 public class TemplatePathResolverJasperReportImpl implements TemplatePathResolver {
     private static final String JASPER_FILE_EXTENSION = "jrxml";
