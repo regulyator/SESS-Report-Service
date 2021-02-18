@@ -1,0 +1,19 @@
+org:
+  sess:
+    service:
+      external:
+        core:
+          events:
+            user:
+              path: /sees/core/events/user/{userId}
+          url: http://127.0.0.1:8099
+    report:
+      tmp:
+        locations: ./files/execute/tmp
+      templates:
+        locations:
+          - ./files/templates
+
+feign:
+  hystrix:
+    enabled: false

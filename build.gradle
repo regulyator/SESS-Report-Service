@@ -1,17 +1,19 @@
 plugins {
     id 'idea'
-    id "io.spring.dependency-management" version "1.0.9.RELEASE"
+    id 'org.springframework.boot' version '2.4.1'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'com.github.johnrengelman.shadow' version '5.2.0' apply false
 }
 
 idea {
-    project {
-        languageLevel = 14
-    }
     module {
         downloadJavadoc = true
         downloadSources = true
     }
+}
+
+ext {
+    set('springCloudVersion', "2020.0.0")
 }
 
 allprojects {
@@ -19,13 +21,16 @@ allprojects {
 
     repositories {
         mavenCentral()
+        maven { url "http://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/" }
+        maven { url 'https://repo.spring.io/milestone' }
     }
 
     apply plugin: "io.spring.dependency-management"
     dependencyManagement {
         dependencies {
             imports {
-                mavenBom("org.springframework.boot:spring-boot-dependencies:2.3.1.RELEASE")
+                mavenBom 'org.springframework.boot:spring-boot-dependencies:2.4.0'
+                mavenBom 'org.springframework.cloud:spring-cloud-dependencies:2020.0.0'
             }
             dependency("com.google.guava:guava:${Versions.guava}")
             dependency("org.apache.commons:commons-lang3:${Versions.apacheLang}")
@@ -33,6 +38,9 @@ allprojects {
             dependency("org.junit.jupiter:junit-jupiter-api:${Versions.jupiterTest}")
             dependency("org.mockito:mockito-core:${Versions.mockito}")
             dependency("org.mockito:mockito-junit-jupiter:${Versions.mockito}")
+            dependency("net.sf.jasperreports:jasperreports:${Versions.jasperreports}")
+            dependency("net.sf.jasperreports:jasperreports-functions:${Versions.jasperreports}")
+            dependency("commons-io:commons-io:${Versions.commonsIo}")
         }
     }
 }

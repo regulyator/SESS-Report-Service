@@ -8,11 +8,20 @@ targetCompatibility = JavaVersion.VERSION_14
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'net.sf.jasperreports:jasperreports'
+    implementation 'net.sf.jasperreports:jasperreports-functions'
+    implementation 'com.lowagie:itext:2.1.7'
+    implementation 'commons-io:commons-io'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
     testImplementation 'org.junit.jupiter:junit-jupiter-api'
     testImplementation 'org.assertj:assertj-core'
     testImplementation 'org.mockito:mockito-core'
     testImplementation 'org.mockito:mockito-junit-jupiter'
+
 }
 
 shadowJar {

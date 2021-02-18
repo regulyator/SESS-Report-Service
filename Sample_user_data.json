@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "runningType": {
+      "id": 3,
+      "caption": "title1",
+      "group": {
+        "id": 3,
+        "city": {
+          "id": 2,
+          "address": "г Майкоп"
+        },
+        "creator": {
+          "id": 3,
+          "nickname": "nick1",
+          "email": "email1@mail.ru",
+          "city": {
+            "id": 1,
+            "address": "address"
+          },
+          "sex": "MALE",
+          "birthday": "2021-01-11T23:34:43.8269685"
+        },
+        "title": "title1",
+        "description": null
+      }
+    },
+    "eventName": "Тестовое мероприятие",
+    "distance": 10,
+    "placeStart": "start",
+    "placeEnd": "end",
+    "plannedDtStart": "2021-01-05T14:34:43.9272095",
+    "plannedDtEnd": "2021-01-05T20:34:43.9272095",
+    "description": "description",
+    "group": {
+      "id": 3,
+      "city": {
+        "id": 2,
+        "address": "г Майкоп"
+      },
+      "creator": {
+        "id": 3,
+        "nickname": "nick1",
+        "email": "email1@mail.ru",
+        "city": {
+          "id": 1,
+          "address": "address"
+        },
+        "sex": "MALE",
+        "birthday": "2021-01-11T23:34:43.8269685"
+      },
+      "title": "title1",
+      "description": null
+    },
+    "factualDtStart": "2021-01-10T23:34:43.9272095",
+    "factualDtEnd": "2021-01-11T01:34:43.9272095"
+  },
+  {
+    "id": 2,
+    "runningType": {
+      "id": 3,
+      "caption": "title1",
+      "group": {
+        "id": 3,
+        "city": {
+          "id": 2,
+          "address": "г Майкоп"
+        },
+        "creator": {
+          "id": 3,
+          "nickname": "nick1",
+          "email": "email1@mail.ru",
+          "city": {
+            "id": 1,
+            "address": "address"
+          },
+          "sex": "MALE",
+          "birthday": "2021-01-11T23:34:43.8269685"
+        },
+        "title": "title1",
+        "description": null
+      }
+    },
+    "eventName": "Тестовое мероприятие 2",
+    "distance": 0.4,
+    "placeStart": "start",
+    "placeEnd": "end",
+    "plannedDtStart": "2021-01-08T20:34:43.9272095",
+    "plannedDtEnd": "2021-01-08T21:34:43.9272095",
+    "description": "description",
+    "group": {
+      "id": 3,
+      "city": {
+        "id": 2,
+        "address": "г Майкоп"
+      },
+      "creator": {
+        "id": 3,
+        "nickname": "nick1",
+        "email": "email1@mail.ru",
+        "city": {
+          "id": 1,
+          "address": "address"
+        },
+        "sex": "MALE",
+        "birthday": "2021-01-11T23:34:43.8269685"
+      },
+      "title": "title1",
+      "description": null
+    },
+    "factualDtStart": "2021-01-10T23:34:43.9272095",
+    "factualDtEnd": "2021-01-11T01:34:43.9272095"
+  },
+  {
+    "id": 3,
+    "runningType": {
+      "id": 3,
+      "caption": "title1",
+      "group": {
+        "id": 3,
+        "city": {
+          "id": 2,
+          "address": "г Майкоп"
+        },
+        "creator": {
+          "id": 3,
+          "nickname": "nick1",
+          "email": "email1@mail.ru",
+          "city": {
+            "id": 1,
+            "address": "address"
+          },
+          "sex": "MALE",
+          "birthday": "2021-01-11T23:34:43.8269685"
+        },
+        "title": "title1",
+        "description": null
+      }
+    },
+    "eventName": "Тестовое мероприятие 3",
+    "distance": 20.34,
+    "placeStart": "start",
+    "placeEnd": "end",
+    "plannedDtStart": "2021-01-10T23:34:43.9272095",
+    "plannedDtEnd": "2021-01-11T01:34:43.9272095",
+    "description": "description",
+    "group": {
+      "id": 3,
+      "city": {
+        "id": 2,
+        "address": "г Майкоп"
+      },
+      "creator": {
+        "id": 3,
+        "nickname": "nick1",
+        "email": "email1@mail.ru",
+        "city": {
+          "id": 1,
+          "address": "address"
+        },
+        "sex": "MALE",
+        "birthday": "2021-01-11T23:34:43.8269685"
+      },
+      "title": "title1",
+      "description": null
+    },
+    "factualDtStart": "2021-01-10T23:34:43.9272095",
+    "factualDtEnd": "2021-01-11T01:34:43.9272095"
+  }
+]
